@@ -7,4 +7,9 @@ class PostModel {
   factory PostModel.fromJson(Map json) {
     return PostModel(json['codigo'], json['nome']);
   }
+
+  @override
+  String toString() {
+    return "codigo: $codigo";
+  }
 }

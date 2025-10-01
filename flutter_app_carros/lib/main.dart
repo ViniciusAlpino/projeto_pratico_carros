@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_chamada/Pages/details_page.dart';
 import 'package:flutter_app_chamada/Pages/home_page.dart';
 import 'package:flutter_app_chamada/Pages/page_inicial.dart';
 import 'package:flutter_app_chamada/Pages/splash_page.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         "/splash": (_) => SplashPage(),
         "/inicial": (_) => PageInicial(),
         "/home": (_) => HomePage(),
-      },
+        "/details": (_) => DetailsPage(),
+      }
     );
   }
 }

@@ -13,6 +13,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   HomeController _controller = HomeController(HomeReposityImp());
 
+  
+
   @override
   void initState() {
     super.initState();
@@ -46,9 +48,10 @@ class _HomePageState extends State<HomePage> {
             itemCount: list.length,
             itemBuilder: (_, idx) => ListTile(
               trailing: Icon(Icons.arrow_forward),
-              title: Text(list[idx].nome, style: TextStyle(fontSize: 20),),
+              title: Text(list[idx].nome, style: TextStyle(fontSize: 20)),
+              onTap: () => Navigator.of(context).pushNamed("/details", arguments: list[idx]),
             ),
-            separatorBuilder: (_,__) => Divider(),
+            separatorBuilder: (_, __) => Divider(),
           );
         },
       ),
