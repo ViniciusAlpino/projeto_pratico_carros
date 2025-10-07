@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_chamada/services/prefs_services.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -15,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Future.wait([
       PrefsServices.isAuth(),
-      Future.delayed(Duration(seconds: 2)),
+      Future.delayed(Duration(seconds: 3)),
     ]).then((value) => value[0]
     ? Navigator.of(context).pushReplacementNamed('/home')
     : Navigator.of(context).pushReplacementNamed('/inicial'));
@@ -26,7 +27,10 @@ class _SplashPageState extends State<SplashPage> {
     return Container(
       color: Colors.white60,
       child: Center(
-        child: CircularProgressIndicator(color: Colors.black,),
+        child:Lottie.asset('assets/car.json',
+        width: 400, 
+          height: 400, 
+          fit: BoxFit.contain,),
       ),
     );
   }

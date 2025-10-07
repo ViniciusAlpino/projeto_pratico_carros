@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_chamada/controllers/home_controller.dart';
 import 'package:flutter_app_chamada/reposity/home_reposity_imp.dart';
 import 'package:flutter_app_chamada/services/prefs_services.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

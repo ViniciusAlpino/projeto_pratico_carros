@@ -13,14 +13,21 @@ class DetailsPage extends StatelessWidget {
         backgroundColor: Colors.black,
         iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
-        title: Text(args.nome, style: TextStyle(color: Colors.white),),
+        title: Text(args.nome, style: TextStyle(color: Colors.white)),
       ),
       body: Container(
         padding: EdgeInsets.all(28),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(args.nome, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic ),)
+            Text(
+              args.nome,
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
           ],
         ),
       ),
