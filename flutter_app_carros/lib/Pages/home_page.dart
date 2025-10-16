@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_chamada/controllers/home_controller.dart';
 import 'package:flutter_app_chamada/reposity/home_reposity_imp.dart';
 import 'package:flutter_app_chamada/services/prefs_services.dart';
-import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (_, idx) => ListTile(
               trailing: Icon(Icons.arrow_forward),
               title: Text(list[idx].nome, style: TextStyle(fontSize: 20)),
-              onTap: () => Navigator.of(context).pushNamed("/details", arguments: list[idx]),
+              onTap: () => Navigator.of(context).pushNamed('/details', arguments: list[idx]),
             ),
             separatorBuilder: (_, __) => Divider(),
           );
