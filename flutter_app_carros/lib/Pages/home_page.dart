@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_chamada/Pages/details_page.dart';
 import 'package:flutter_app_chamada/controllers/home_controller.dart';
 import 'package:flutter_app_chamada/reposity/home_reposity_imp.dart';
 import 'package:flutter_app_chamada/services/prefs_services.dart';
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  HomeController _controller = HomeController(HomeReposityImp());
+ final HomeController _controller = HomeController(HomeReposityImp());
 
   
 
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('Marcas', style: TextStyle(color: Colors.white)),
       ),
       body: ValueListenableBuilder(
-        valueListenable: _controller.posts,
+        valueListenable: _controller.marcas,
         builder: (_, list, __) {
           return ListView.separated(
             shrinkWrap: true,
@@ -49,7 +50,10 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (_, idx) => ListTile(
               trailing: Icon(Icons.arrow_forward),
               title: Text(list[idx].nome, style: TextStyle(fontSize: 20)),
-              onTap: () => Navigator.of(context).pushNamed('/details', arguments: list[idx]),
+              onTap: () {
+                print(list[idx].nome);
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=> DetailsPage(marca: list[idx])));
+              },
             ),
             separatorBuilder: (_, __) => Divider(),
           );

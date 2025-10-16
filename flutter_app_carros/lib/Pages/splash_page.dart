@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.wait([
       PrefsServices.isAuth(),
       Future.delayed(Duration(seconds: 3)),
-    ]).then((value) => value[0]
+    ]).then((isAuthenticated) => isAuthenticated[0]
     ? Navigator.of(context).pushReplacementNamed('/home')
     : Navigator.of(context).pushReplacementNamed('/inicial'));
   }

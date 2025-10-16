@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         "/splash": (_) => SplashPage(),
         "/inicial": (_) => PageInicial(),
         "/home": (_) => HomePage(),
-        "/details": (_) => DetailsPage(),
       }
     );
   }

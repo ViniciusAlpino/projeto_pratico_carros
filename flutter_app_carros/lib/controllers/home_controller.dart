@@ -7,10 +7,10 @@ class HomeController {
   HomeController(this._homeReposity);
 
 
-  ValueNotifier<List<PostModel>> posts =  ValueNotifier<List<PostModel>>([]);
+  ValueNotifier<List<PostModel>> marcas =  ValueNotifier<List<PostModel>>([]);
 
 
   fetch() async{
-    posts.value = await _homeReposity.getList();
+    marcas.value = await _homeReposity.getList();
   }
 }
