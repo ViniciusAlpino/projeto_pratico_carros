@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_chamada/Pages/year_page.dart';
 import 'package:flutter_app_chamada/controllers/details_controller.dart';
 import 'package:flutter_app_chamada/models/post_model.dart';
 import 'package:flutter_app_chamada/reposity/details_reposity_imp.dart';
@@ -43,7 +44,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 print(list[idx].nome);
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => DetailsPage(marca: list[idx]),
+                    builder: (_) => YearPage(modelo: list[idx], marca: widget.marca,),
                   ),
                 );
               },

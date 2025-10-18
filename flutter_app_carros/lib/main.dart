@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_chamada/Pages/details_page.dart';
 import 'package:flutter_app_chamada/Pages/home_page.dart';
 import 'package:flutter_app_chamada/Pages/page_inicial.dart';
 import 'package:flutter_app_chamada/Pages/splash_page.dart';
