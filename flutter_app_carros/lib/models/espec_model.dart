@@ -1,25 +1,14 @@
 class EspecModel {
-  final String TipoVeiculo;
-  final int Valor;
-  final String Marca;
-  final String Modelo;
-  final String Ano;
-  final String Combustivel;
-  final String CodigoFipe;
-  final String MesReferencia;
-  final String SiglaCombustivel;
+  final String tipo;
+  final int valor;
+  final String marca;
+  final String modelo;
+  final String ano;
+  final String combustivel;
+  final String fipe;
+  final String mes;
 
-  EspecModel(
-    this.TipoVeiculo,
-    this.Valor,
-    this.Marca,
-    this.Modelo,
-    this.Ano,
-    this.Combustivel,
-    this.CodigoFipe,
-    this.MesReferencia,
-    this.SiglaCombustivel,
-  );
+EspecModel(this.tipo, this.valor, this.marca, this.modelo, this.ano, this.combustivel, this.fipe, this.mes);
 
   factory EspecModel.fromJson(Map json) {
     return EspecModel(
@@ -31,7 +20,8 @@ class EspecModel {
       json['Combustivel'],
       json['CodigoFipe'],
       json['MesReferencia'],
-      json['SiglaCombustivel'],
     );
   }
+
+  
 }

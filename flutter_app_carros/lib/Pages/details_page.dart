@@ -6,7 +6,7 @@ import 'package:flutter_app_chamada/reposity/details_reposity_imp.dart';
 
 class DetailsPage extends StatefulWidget {
   final PostModel marca;
-  const DetailsPage({super.key, required this.marca});
+  const DetailsPage({super.key, required this.marca,});
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();

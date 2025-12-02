@@ -5,7 +5,7 @@ import 'package:flutter_app_chamada/reposity/home_reposity_imp.dart';
 import 'package:flutter_app_chamada/services/prefs_services.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key,});
 
   @override
   State<HomePage> createState() => _HomePageState();

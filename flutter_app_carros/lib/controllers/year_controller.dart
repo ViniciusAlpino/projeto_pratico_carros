@@ -9,7 +9,7 @@ class YearController {
   YearController(this._yearReposity, this.codigoano, this.codigomarca);
 
 
-  ValueNotifier<List<PostModel>> anos =  ValueNotifier<List<PostModel>>([]);
+  ValueNotifier<List<PostModel>> anos =   ValueNotifier<List<PostModel>>([]);
 
 
 
